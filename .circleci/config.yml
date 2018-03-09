@@ -11,5 +11,5 @@ jobs:
                 cd circlecidemo
                 pwd
                 git status
-                git branch newbranch
+                git checkout newbranch
                 git status
