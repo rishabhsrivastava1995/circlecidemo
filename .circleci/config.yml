@@ -4,7 +4,9 @@ jobs:
         docker:
             - image: circleci/python:2.7-stretch-browsers
         steps:
+            - checkout
             - run: |
+                cd ..
                 mv project circlecidemo
                 cd circlecidemo
                 pwd
@@ -13,4 +15,3 @@ jobs:
                 git branch newbranch
                 git status
                 git log
-                
