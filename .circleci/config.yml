@@ -4,5 +4,6 @@ jobs:
         docker:
             - image: circleci/python:2.7-stretch-browsers
         steps:
-            - run: pwd && cd .. && pwd && ls && cd project && ls && git status && git remote -v
-            - run: pwd
+            - checkout
+            - run: |
+                git status
