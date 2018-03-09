@@ -5,5 +5,12 @@ jobs:
             - image: circleci/python:2.7-stretch-browsers
         steps:
             - run: |
+                mv project circlecidemo
+                cd circlecidemo
                 pwd
-                ls
+                git status
+                git log
+                git branch newbranch
+                git status
+                git log
+                
