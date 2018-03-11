@@ -2,15 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:2.7-stretch-browsers
+      - image: circleci/ruby:2.4.1
     working_directory: ~/mern-starter
     steps:
       - checkout
       - run: |
-          cd ..
-          mv project circlecidemo
-          cd circlecidemo
           pwd
-          git status
-          git checkout newbranch
-          git status
+          ls
+          git branch
